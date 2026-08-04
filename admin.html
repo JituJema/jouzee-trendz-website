@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin | JOUZEE TRENDZ</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="images/logo-icon.jpg">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="lang-sw">
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><img src="images/logo-icon.jpg" alt="Jouzee Trendz"></a>
+    <ul class="nav-links" id="navLinks" style="display:flex;">
+      <li><a href="index.html">Website</a></li>
+      <li><button id="logoutBtn" class="lang-toggle hidden">Logout</button></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="section">
+  <div class="container admin-wrap">
+
+    <div id="loginBox" class="form-card">
+      <h2 style="margin-bottom:14px;">Admin Login — JOUZEE TRENDZ</h2>
+      <label>Password</label>
+      <input type="password" id="adminPassword">
+      <button class="btn btn-gold" id="loginBtn" style="margin-top:16px;width:100%;">Ingia / Login</button>
+      <div id="loginMsg"></div>
+    </div>
+
+    <div id="adminPanel" class="hidden">
+      <div class="admin-header">
+        <h2>Bidhaa (Products)</h2>
+        <button class="btn btn-gold" id="newProductBtn">+ Bidhaa Mpya</button>
+      </div>
+      <div id="statusMsg"></div>
+
+      <div id="productForm" class="form-card hidden" style="max-width:100%;margin-bottom:30px;">
+        <h3 id="formTitle">Bidhaa Mpya</h3>
+        <input type="hidden" id="pId">
+        <label>Jina (Swahili)</label>
+        <input type="text" id="pNameSw">
+        <label>Name (English)</label>
+        <input type="text" id="pNameEn">
+        <label>Maelezo (Swahili)</label>
+        <textarea id="pDescSw"></textarea>
+        <label>Description (English)</label>
+        <textarea id="pDescEn"></textarea>
+        <label>Bei (TZS)</label>
+        <input type="number" id="pPrice">
+        <label>Picha ya Bidhaa (Product Image)</label>
+        <input type="file" id="pImage" accept="image/*">
+        <img id="pImagePreview" style="max-width:120px;margin-top:10px;border-radius:8px;" class="hidden">
+        <div style="display:flex;gap:10px;margin-top:20px;">
+          <button class="btn btn-gold" id="saveProductBtn">Hifadhi / Save</button>
+          <button class="btn btn-outline" id="cancelFormBtn">Ghairi / Cancel</button>
+        </div>
+      </div>
+
+      <table class="admin-table">
+        <thead><tr><th>Picha</th><th>Jina</th><th>Bei</th><th></th></tr></thead>
+        <tbody id="productsTableBody"></tbody>
+      </table>
+    </div>
+
+  </div>
+</section>
+
+<script src="script.js"></script>
+<script src="admin.js"></script>
+</body>
+</html>

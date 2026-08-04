@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bidhaa | JOUZEE TRENDZ</title>
+<link rel="icon" href="images/logo-icon.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="lang-sw">
+
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><img src="images/logo-icon.jpg" alt="Jouzee Trendz"></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html"><span class="lang-sw">Nyumbani</span><span class="lang-en">Home</span></a></li>
+      <li><a href="products.html"><span class="lang-sw">Bidhaa</span><span class="lang-en">Products</span></a></li>
+      <li><a href="contact.html"><span class="lang-sw">Wasiliana Nasi</span><span class="lang-en">Contact</span></a></li>
+      <li><button id="langToggle" class="lang-toggle">EN</button></li>
+      <li><a href="#" id="cartToggle" class="nav-cart">🛍️ <span class="cart-count" id="cartCount">0</span></a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle">☰</button>
+  </div>
+</nav>
+
+<section class="section" style="padding-top:50px;">
+  <div class="container">
+    <h1 class="section-title"><span class="lang-sw">Bidhaa Zetu Zote</span><span class="lang-en">All Products</span></h1>
+    <p class="section-sub"><span class="lang-sw">Chagua unachopenda, weka kartini, tuma order kwa WhatsApp.</span>
+      <span class="lang-en">Pick what you love, add to cart, send your order via WhatsApp.</span></p>
+    <div class="products-grid" id="allProducts">
+      <p class="empty-state"><span class="lang-sw">Inapakia...</span><span class="lang-en">Loading...</span></p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <img src="images/logo-icon.jpg" alt="Jouzee Trendz" style="height:40px;margin:0 auto 10px;border-radius:6px;">
+    <div class="foot-links">
+      <a href="index.html"><span class="lang-sw">Nyumbani</span><span class="lang-en">Home</span></a>
+      <a href="products.html"><span class="lang-sw">Bidhaa</span><span class="lang-en">Products</span></a>
+      <a href="contact.html"><span class="lang-sw">Wasiliana Nasi</span><span class="lang-en">Contact</span></a>
+      <a href="terms.html">Terms</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="returns.html">Returns</a>
+    </div>
+    <div class="socials">
+      <a href="https://www.instagram.com/jouzee_trendz?igsh=MWYxbXBkdGczbzQ0Ng%3D%3D&utm_source=qr" target="_blank">Instagram</a>
+      <a href="https://wa.me/255654701189" target="_blank">WhatsApp</a>
+    </div>
+    <small>&copy; 2026 JOUZEE TRENDZ — Dar es Salaam, Tanzania. All rights reserved.</small>
+  </div>
+</footer>
+
+<a href="https://wa.me/255654701189" class="whatsapp-float" target="_blank" aria-label="WhatsApp">💬</a>
+
+<div class="cart-overlay" id="cartOverlay"></div>
+<div class="cart-drawer" id="cartDrawer">
+  <div class="cart-header">
+    <h3><span class="lang-sw">Kartini Yangu</span><span class="lang-en">My Cart</span></h3>
+    <button id="cartClose">✕</button>
+  </div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-footer">
+    <div class="cart-total"><span><span class="lang-sw">Jumla</span><span class="lang-en">Total</span></span><span id="cartTotal">TZS 0</span></div>
+    <form id="checkoutForm" class="checkout-form">
+      <label><span class="lang-sw">Jina Lako</span><span class="lang-en">Your Name</span></label>
+      <input type="text" id="custName" required>
+      <label><span class="lang-sw">Namba ya Simu</span><span class="lang-en">Phone Number</span></label>
+      <input type="text" id="custPhone" required>
+      <label><span class="lang-sw">Location / Eneo</span><span class="lang-en">Location</span></label>
+      <input type="text" id="custLocation" required>
+      <button type="submit" class="btn btn-gold" style="width:100%;">
+        <span class="lang-sw">Tuma Order kwa WhatsApp</span><span class="lang-en">Send Order via WhatsApp</span>
+      </button>
+    </form>
+  </div>
+</div>
+
+<script src="script.js"></script>
+<script>
+loadProducts().then(products => {
+  const wrap = document.getElementById('allProducts');
+  if(!wrap) return;
+  wrap.innerHTML = '';
+  if(products.length === 0){
+    wrap.innerHTML = '<p class="empty-state"><span class="lang-sw">Hakuna bidhaa kwa sasa.</span><span class="lang-en">No products yet.</span></p>';
+    return;
+  }
+  products.forEach(p => wrap.appendChild(renderProductCard(p)));
+});
+</script>
+</body>
+</html>

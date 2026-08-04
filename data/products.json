@@ -1,0 +1,29 @@
+[
+  {
+    "id": "p1",
+    "name": "Elegant Evening Handbag",
+    "name_sw": "Mkoba Mzuri wa Jioni",
+    "desc": "Premium quality handbag, perfect for every occasion.",
+    "desc_sw": "Mkoba wa hali ya juu, unaofaa kwa kila tukio.",
+    "price": 45000,
+    "image": "images/logo-icon.jpg"
+  },
+  {
+    "id": "p2",
+    "name": "Trendy Party Dress",
+    "name_sw": "Gauni Zuri la Tukio",
+    "desc": "Stylish dress that keeps you on trend every day.",
+    "desc_sw": "Gauni la kisasa linalokufanya uwe mtindoni kila siku.",
+    "price": 60000,
+    "image": "images/logo-icon.jpg"
+  },
+  {
+    "id": "p3",
+    "name": "Classic Heels",
+    "name_sw": "Viatu vya Classic",
+    "desc": "Comfortable and elegant heels for every step.",
+    "desc_sw": "Viatu vya starehe na umaridadi kwa kila hatua.",
+    "price": 35000,
+    "image": "images/logo-icon.jpg"
+  }
+]
