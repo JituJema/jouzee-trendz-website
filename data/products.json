@@ -1,14 +1,5 @@
 [
   {
-    "id": "p1",
-    "name": "Elegant Evening Handbag",
-    "name_sw": "Mkoba Mzuri wa Jioni",
-    "desc": "Premium quality handbag, perfect for every occasion.",
-    "desc_sw": "Mkoba wa hali ya juu, unaofaa kwa kila tukio.",
-    "price": 45000,
-    "image": "images/logo-icon.jpg"
-  },
-  {
     "id": "p2",
     "name": "Trendy Party Dress",
     "name_sw": "Gauni Zuri la Tukio",
