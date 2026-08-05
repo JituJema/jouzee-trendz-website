@@ -4,15 +4,16 @@ const WHATSAPP_NUMBER = "255654701189"; // 0654701189 in intl format
 /* ---------- Language toggle ---------- */
 function initLang(){
   const saved = localStorage.getItem('jt_lang') || 'sw';
-  document.body.classList.add('lang-' + saved);
+  document.body.classList.remove('site-sw','site-en');
+  document.body.classList.add('site-' + saved);
   const btn = document.getElementById('langToggle');
   if(btn){
     btn.textContent = saved === 'sw' ? 'EN' : 'SW';
     btn.addEventListener('click', () => {
-      const cur = document.body.classList.contains('lang-sw') ? 'sw' : 'en';
+      const cur = document.body.classList.contains('site-sw') ? 'sw' : 'en';
       const next = cur === 'sw' ? 'en' : 'sw';
-      document.body.classList.remove('lang-' + cur);
-      document.body.classList.add('lang-' + next);
+      document.body.classList.remove('site-' + cur);
+      document.body.classList.add('site-' + next);
       localStorage.setItem('jt_lang', next);
       btn.textContent = next === 'sw' ? 'EN' : 'SW';
     });

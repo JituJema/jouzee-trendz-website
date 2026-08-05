@@ -40,10 +40,10 @@ h1,h2,h3,h4{font-family: var(--font-head); font-weight:700;}
 
 /* ===== Language toggle ===== */
 .lang-sw, .lang-en{ display:none; }
-body.lang-sw .lang-sw{ display:inline; }
-body.lang-sw .lang-sw-block{ display:block; }
-body.lang-en .lang-en{ display:inline; }
-body.lang-en .lang-en-block{ display:block; }
+body.site-sw .lang-sw{ display:inline; }
+body.site-sw .lang-sw-block{ display:block; }
+body.site-en .lang-en{ display:inline; }
+body.site-en .lang-en-block{ display:block; }
 .lang-toggle{
   background:transparent; border:1px solid var(--gold); color:var(--gold);
   border-radius:999px; padding:6px 14px; font-size:.8rem; cursor:pointer; font-weight:600;
