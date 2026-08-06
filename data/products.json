@@ -115,5 +115,14 @@
     "desc_sw": "",
     "price": 35000,
     "image": "images/products/p1785981271688-1785981324133.jpeg"
+  },
+  {
+    "id": "p1785981505888",
+    "name": "NYC-themed mini dress",
+    "name_sw": "",
+    "desc": "Casual look that gives expensive taste. \nS m l",
+    "desc_sw": "",
+    "price": 30000,
+    "image": "images/products/p1785981505888-1785981614644.jpeg"
   }
 ]
