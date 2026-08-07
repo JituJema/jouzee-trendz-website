@@ -160,5 +160,14 @@
     "desc_sw": "",
     "price": 38000,
     "image": "images/products/p1786060668093-1786060748033.jpeg"
+  },
+  {
+    "id": "p1786060371509",
+    "name": "Blue gingham mini🩵",
+    "name_sw": "",
+    "desc": "Sky blue 🩵\nSize s, m, l, xl\nSummer styling for warm weather occasions 🥥🍹",
+    "desc_sw": "",
+    "price": 38000,
+    "image": "https://jouzee-trendz-website.vercel.app/images/products/p1786060371509-1786060479624.jpeg"
   }
 ]
